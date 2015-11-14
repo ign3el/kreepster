@@ -12,3 +12,6 @@
 */
 
 Route::resource('/api','MyAPI');
+Route::resource('/UserTable','UserTableController');
+Route::resource('/PictureTable','PictureTableController');
+Route::resource('/UserPicture','UserPictureController');

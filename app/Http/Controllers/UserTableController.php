@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\UserTable;
 
-class MyAPI extends Controller
+class UserTableController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,8 @@ class MyAPI extends Controller
      */
     public function index()
     {
-        return response()->json(['data' =>['1','2']],200);
+        $UserTables = UserTable::all();
+        return response()->json(['data' =>$UserTables, 'code' => 200],200);
     }
 
     /**
@@ -37,8 +39,7 @@ class MyAPI extends Controller
      */
     public function store(Request $request)
     {
-        $variable = $request->all();
-        return response()->json(['data' => $variable->asa]);
+        //
     }
 
     /**
@@ -49,7 +50,7 @@ class MyAPI extends Controller
      */
     public function show($id)
     {
-        return response()->json(['data' => [$id.'!!']],200);
+        //
     }
 
     /**
