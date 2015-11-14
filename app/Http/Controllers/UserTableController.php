@@ -18,7 +18,7 @@ class UserTableController extends Controller
     public function index()
     {
         $UserTables = UserTable::all();
-        return response()->json(['data' =>$UserTables, 'code' => 202],202);
+        return response()->json(['data' =>$UserTables, 'code' => 200],200);
     }
 
     /**
