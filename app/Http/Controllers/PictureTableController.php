@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\PictureTable;
 class PictureTableController extends Controller
 {
     /**
@@ -16,7 +16,11 @@ class PictureTableController extends Controller
      */
     public function index()
     {
-        //
+        $pics = PictureTable::all();
+         if(!$pics) {
+            return response()->json(['message' => 'Does Not Exists!!!','code' =>404],404);
+        }
+        return response()->json(['data' => $pics]);
     }
 
     /**
@@ -26,7 +30,8 @@ class PictureTableController extends Controller
      */
     public function create()
     {
-        //
+        
+
     }
 
     /**
@@ -37,7 +42,10 @@ class PictureTableController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $values = $request->only('UserID');
+        PictureTable::create($values);
+        return response()->json(['message' => 'Successfully Added Picture','code'=>202],202);
+
     }
 
     /**
@@ -48,7 +56,11 @@ class PictureTableController extends Controller
      */
     public function show($id)
     {
-        //
+        $pics = PictureTable::find($id);
+         if(!$pics) {
+            return response()->json(['message' => 'Does Not Exists!!!','code' =>404],404);
+        }
+        return response()->json(['data' => $pics]);
     }
 
     /**
