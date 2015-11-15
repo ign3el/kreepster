@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\UserTable;
+use App\PictureTable;
 class PictureUserController extends Controller
 {
     /**
@@ -18,7 +19,7 @@ class PictureUserController extends Controller
     {
         $user = UserTable::find($id);
         if(!$user) {
-            return response()->json(['message' => 'Does Not Exists!!!'],404);
+            return response()->json(['message' => 'Does Not Exists!!!','code' =>404],404);
         }
         return response()->json(['data' => $user->PictureTable]);
 
@@ -51,9 +52,18 @@ class PictureUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id,$pid)
     {
-        //
+        $user = UserTable::find($id);
+        if(!$user) {
+            return response()->json(['message' => 'Does Not Exists!!!','code' =>404],404);
+        }
+        $picture = $user->PictureTable->find($pid);
+        if(!$picture) {
+             return response()->json(['message' => 'Picture  Not Exists!!!','code' =>404],404);
+        }
+        return response()->json(['data' => $picture]);
+
     }
 
     /**

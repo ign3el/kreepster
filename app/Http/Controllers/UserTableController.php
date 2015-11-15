@@ -52,7 +52,7 @@ class UserTableController extends Controller
     {
         $user = UserTable::find($id);
          if(!$user) {
-            return response()->json(['message' => 'Does Not Exists!!!'],404);
+            return response()->json(['message' => 'Does Not Exists!!!','code' =>404],404);
         }
         return response()->json(['data' => $user],200);
     }
