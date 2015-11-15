@@ -7,18 +7,21 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\UserTable;
-
-class UserTableController extends Controller
+class PictureUserController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $UserTables = UserTable::all();
-        return response()->json(['data' =>$UserTables, 'code' => 202],202);
+        $user = UserTable::find($id);
+        if(!$user) {
+            return response()->json(['message' => 'Does Not Exists!!!'],404);
+        }
+        return response()->json(['data' => $user->PictureTable]);
+
     }
 
     /**
@@ -50,11 +53,7 @@ class UserTableController extends Controller
      */
     public function show($id)
     {
-        $user = UserTable::find($id);
-         if(!$user) {
-            return response()->json(['message' => 'Does Not Exists!!!'],404);
-        }
-        return response()->json(['data' => $user],200);
+        //
     }
 
     /**

@@ -12,6 +12,6 @@ class PictureTable extends Model
  
          public function UserTable()
     {
-        return $this->hasMany('App\UserTable');
+        return $this->belongsTo('App\UserTable');
     }
 }

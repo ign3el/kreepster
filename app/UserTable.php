@@ -9,8 +9,8 @@ class UserTable extends Model
     protected $table = 'UserTables'; 
     protected $primaryKey = 'UserID';
    // protected $hidden = ['created_at'];
-     public function PictureTable()
+         public function PictureTable()
     {
-        return $this->belongsTo('App\PictureTable');
+        return $this->hasMany('App\PictureTable','PictureID','UserID');
     }
 }
