@@ -10,9 +10,7 @@ use App\UserTable;
 use App\PictureTable;
 class PictureUserController extends Controller
 {
-        public function _construct(){
-        $this->middleware('auth.basic');
-    }
+
     /**
      * Display a listing of the resource.
      *

@@ -9,9 +9,7 @@ use App\Http\Controllers\Controller;
 
 class UserPictureController extends Controller
 {
-        public function _construct(){
-        $this->middleware('auth.basic');
-    }
+
     /**
      * Display a listing of the resource.
      *

@@ -11,9 +11,7 @@ use App\UserPicture;
 use App\Http\Requests\PictureRequest;
 class PictureTableController extends Controller
 {
-    public function __construct(){
-        $this->middleware('auth.basic');
-    }
+
     /**
      * Display a listing of the resource.
      *
