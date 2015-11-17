@@ -21,3 +21,4 @@ Route::resource('/PictureTable','PictureTableController');
 Route::resource('/UserPicture','UserPictureController');
 Route::resource('UserTable.PictureTable' , 'PictureUserController');
 Route::post('/PictureTable/{PictureID?}/Action/{action?}/{uid?}', 'PictureTableController@action');
+Route::get('/PictureRank/TopRating/{type?}','PictureTableController@rating');

@@ -50,6 +50,21 @@ class PictureTableController extends Controller
         return response()->json(['message' => 'Successfully Added Picture','code'=>202],202);
 
     }
+    public function rating($type) {
+
+        if($type == "beauty") {
+
+            $pic = PictureTable::orderby('BeautyCount','DESC')->find(1);
+            return response()->json(['data'=>$pic,'code'=>200],200);
+
+        }else if($type == "kreepy") {
+            $pic = PictureTable::orderby('KreepCount','DESC')->find(1);
+            return response()->json(['data'=>$pic,'code'=>200],200);
+        }else {
+            return response()->json(['message'=>'Invalid Entry','code'=>404],404);
+        }
+
+    }
     public function action(PictureRequest $request,$pid, $action,$uid) {
 
         if($action == 'beauty'){
