@@ -65,7 +65,7 @@ class PictureTableController extends Controller
         }
 
     }
-    public function action(PictureRequest $request,$pid, $action,$uid) {
+    public function action(Request $request,$pid, $action,$uid) {
 
         if($action == 'beauty'){
             $pic = PictureTable::find($pid)->firstorfail();
@@ -77,7 +77,7 @@ class PictureTableController extends Controller
             $userAction->PictureID = $pid;
             $userAction->userAction = '1';
             $userAction->save();
-            return response()->json(['message' =>'addedd beuty count','code'=>202],202);
+            return response()->json(['message' =>'updated beuty count','code'=>202],202);
         }else if($action == 'kreepy') {
             $pic = PictureTable::find($pid)->firstorfail();
             //$pic->KreepCount +=1;
@@ -89,7 +89,7 @@ class PictureTableController extends Controller
             $userAction->PictureID = $pid;
             $userAction->userAction = '-1';
             $userAction->save();
-            return response()->json(['message' =>'addedd Kreep count','code'=>202],202);
+            return response()->json(['message' =>'updated Kreep count','code'=>202],202);
         } else {
             return response()->json(['error' =>'Invalid Action On Picture','code'=>404],404);
         }
