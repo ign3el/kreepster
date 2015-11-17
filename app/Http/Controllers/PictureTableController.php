@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\PictureTable;
+use App\UserPicture;
+use App\Http\Requests\PictureRequest;
 class PictureTableController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth.basic');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -40,12 +45,41 @@ class PictureTableController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PictureRequest $request)
     {
-        $values = $request->only('UserID');
+        $values = $request->only(['UserID','PictureURL','Latitude','Longitude']);
         PictureTable::create($values);
         return response()->json(['message' => 'Successfully Added Picture','code'=>202],202);
 
+    }
+    public function action(PictureRequest $request,$pid, $action,$uid) {
+
+        if($action == 'beauty'){
+            $pic = PictureTable::find($pid)->firstorfail();
+            $count =  $pic->BeautyCount;
+            $pic->BeautyCount = $count + 1;
+            $pic->save();
+            $userAction = new UserPicture;
+            $userAction->UserID = $uid;
+            $userAction->PictureID = $pid;
+            $userAction->userAction = '1';
+            $userAction->save();
+            return response()->json(['message' =>'addedd beuty count','code'=>202],202);
+        }else if($action == 'kreepy') {
+            $pic = PictureTable::find($pid)->firstorfail();
+            //$pic->KreepCount +=1;
+            $count =  $pic->KreepCount;
+            $pic->KreepCount = $count + 1;
+            $pic->save();
+            $userAction = new UserPicture;
+            $userAction->UserID = $uid;
+            $userAction->PictureID = $pid;
+            $userAction->userAction = '-1';
+            $userAction->save();
+            return response()->json(['message' =>'addedd Kreep count','code'=>202],202);
+        } else {
+            return response()->json(['error' =>'Invalid Action On Picture','code'=>404],404);
+        }
     }
 
     /**
