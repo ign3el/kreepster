@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\PictureTable;
 use App\UserPicture;
 use App\Http\Requests\PictureRequest;
+use DB;
 class PictureTableController extends Controller
 {
 
@@ -24,6 +25,29 @@ class PictureTableController extends Controller
             return response()->json(['message' => 'Does Not Exists!!!','code' =>404],404);
         }
         return response()->json(['data' => $pics]);
+    }
+
+       public function getPictures($uid,$ulat,$ulong) {
+
+        $user = \App\UserTable::find($uid);
+        if(!$user){
+            return response()->json(['message'=>'No Such User','code'=>404],404);
+        }
+        $distance = $user->distance;
+        $query = PictureTable::getByDistance($ulat,$ulong,$distance);
+        if(empty($query)) {
+        return response()->json(['message'=>'No Image within the selected distance','code'=>$query ],404);
+        }
+
+        $ids = [];
+       foreach($query as $q)
+       {
+          array_push($ids, $q->PictureID);
+        }
+
+         //Get the listings that match the returned ids
+        $results =PictureTable::whereIn('PictureID', $ids)->get();
+        return response()->json(['message'=>'Success','Images'=>$results,'code'=>200],200);
     }
 
     /**
@@ -68,7 +92,10 @@ class PictureTableController extends Controller
     public function action(Request $request,$pid, $action,$uid) {
 
         if($action == 'beauty'){
-            $pic = PictureTable::find($pid)->firstorfail();
+            $pic = PictureTable::find($pid);
+            if(!$pic) {
+                return response()->json(['error' =>'Invalid Picture ID','code'=>404],404);
+            }
             $count =  $pic->BeautyCount;
             $pic->BeautyCount = $count + 1;
             $pic->save();
@@ -79,8 +106,10 @@ class PictureTableController extends Controller
             $userAction->save();
             return response()->json(['message' =>'updated beuty count','code'=>202],202);
         }else if($action == 'kreepy') {
-            $pic = PictureTable::find($pid)->firstorfail();
-            //$pic->KreepCount +=1;
+             $pic = PictureTable::find($pid);
+            if(!$pic) {
+                return response()->json(['error' =>'Invalid Picture ID','code'=>404],404);
+            }
             $count =  $pic->KreepCount;
             $pic->KreepCount = $count + 1;
             $pic->save();
