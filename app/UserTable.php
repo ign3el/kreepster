@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class UserTable extends Model
 {
     protected $table = 'UserTables'; 
-    protected $primaryKey = 'UserID';
-    protected $guarded = ['UserID'];
+    protected $primaryKey = 'UserName';
+    protected $guarded = ['UserName'];
 
    // protected $hidden = ['created_at'];
          public function PictureTable()
     {
-        return $this->hasMany('App\PictureTable','PictureID','UserID');
+        return $this->hasMany('App\PictureTable','PictureID','UserName');
     }
 }
