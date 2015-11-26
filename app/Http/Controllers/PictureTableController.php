@@ -30,7 +30,13 @@ class PictureTableController extends Controller
         }
         return response()->json(['data' => $pics]);
     }
+public function testgallery() {
 
+    $pics = PictureTable::all();
+    foreach ($pics as $pic) {
+        echo "<img src = '/".$pic->PictureURL."' /><br>";
+    }
+}
        public function getPictures($uid,$ulat,$ulong) {
 
         $user = \App\UserTable::find($uid);

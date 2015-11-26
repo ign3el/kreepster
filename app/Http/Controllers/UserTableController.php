@@ -40,7 +40,19 @@ class UserTableController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $values = $request->all();
+        $uname = $values['UserName'];
+        echo $uname;
+        $user = UserTable::find($uname);
+         if(!$user) {
+
+              UserTable::create($values);
+             return response()->json(['message'=>'User Addedd Successfully','code'=>202],202);
+         } else {
+        //     echo "already";
+             return response()->json(['message'=>'User Already Exists','code'=>422],422);
+         }
+
     }
 
     /**

@@ -8,7 +8,7 @@ class UserTable extends Model
 {
     protected $table = 'UserTables'; 
     protected $primaryKey = 'UserName';
-    protected $guarded = ['UserName'];
+    protected $guarded = ['UserID'];
 
    // protected $hidden = ['created_at'];
          public function PictureTable()
