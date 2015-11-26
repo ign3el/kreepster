@@ -24,10 +24,12 @@ class PictureRequest extends Request
     public function rules()
     {
         return [
-            'UserID'=>'required|int',
-            'PictureURL' =>'required',
+            'UserName'=>'required',
+            'PictureUrl' =>'required',
             'Latitude' =>'required',
             'Longitude' =>'required',
+            'ImageName'=>'required',
+            'ImageExtn'=>'required',
         ];
     }
 

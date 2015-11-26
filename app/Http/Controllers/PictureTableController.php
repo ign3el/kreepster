@@ -12,6 +12,7 @@ use App\Http\Requests\PictureRequest;
 use DB;
 use File;
 use App\UserTable;
+use Input;
 use Intervention\Image\ImageManagerStatic as Image;
 class PictureTableController extends Controller
 {
@@ -70,11 +71,13 @@ class PictureTableController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PictureRequest $request)
     {
-         $values = $request->all();
+        $values = $request->all();
          $uname = $values['UserName'];
+         //print_r($uname);
          $uid = UserTable::find($uname);
+
          if(!$uid) {
             return response()->json(['message'=>'No Such User Found','code'=>404],404);
          } else {
