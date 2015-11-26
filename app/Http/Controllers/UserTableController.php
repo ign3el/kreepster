@@ -42,7 +42,7 @@ class UserTableController extends Controller
     {
         $values = $request->all();
         $uname = $values['UserName'];
-        echo $uname;
+        //echo $uname;
         $user = UserTable::find($uname);
          if(!$user) {
 
