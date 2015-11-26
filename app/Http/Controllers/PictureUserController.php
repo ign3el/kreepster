@@ -74,6 +74,24 @@ class PictureUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function flagInApt(){
+        $values = $request()->all();
+        $uname = $values['UserName'];
+        $pid = $values['PictureID'];
+        $uid = UserTable::find($uname);
+        if(!$uid) {
+            return response()->json(['message'=>'Invalid User','code'=>404].404);
+        }
+        $id = $uid->UserID;
+        $pic = PictureTable::find($pid);
+        if(!$pid) {
+             return response()->json(['message'=>'Invalid Image','code'=>404].404);
+        }
+        unset($values['UserName']);
+        $values['UserID'] = 
+
+    }
     public function edit($id)
     {
         //

@@ -8,6 +8,7 @@ class UserPicture extends Model
 {
    	protected $table = 'UserPictures'; 
     protected $primaryKey = 'UserPictureID';
+    protected $guarded = ['UserPictureID'];
 
          public function PictureTable()
     {

@@ -77,7 +77,7 @@ public function testgallery() {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PictureRequest $request)
+    public function store(Request $request)
     {
         $values = $request->all();
          $uname = $values['UserName'];
