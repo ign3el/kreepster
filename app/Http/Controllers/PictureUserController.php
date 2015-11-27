@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\UserTable;
 use App\PictureTable;
+use App\UserPicture;
 class PictureUserController extends Controller
 {
 
@@ -75,23 +76,7 @@ class PictureUserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function flagInApt(){
-        $values = $request()->all();
-        $uname = $values['UserName'];
-        $pid = $values['PictureID'];
-        $uid = UserTable::find($uname);
-        if(!$uid) {
-            return response()->json(['message'=>'Invalid User','code'=>404].404);
-        }
-        $id = $uid->UserID;
-        $pic = PictureTable::find($pid);
-        if(!$pid) {
-             return response()->json(['message'=>'Invalid Image','code'=>404].404);
-        }
-        unset($values['UserName']);
-        $values['UserID'] = 
 
-    }
     public function edit($id)
     {
         //
@@ -118,5 +103,26 @@ class PictureUserController extends Controller
     public function destroy($id)
     {
         //
+    }
+        public function reportImage(Request $request)
+    {
+        $values = $request->all();
+        $uname = $values['UserName'];
+        $pid = $values['PictureID'];
+        $uid = UserTable::find($uname);
+        if(!$uid) {
+            return response()->json(['message'=>'Invalid User','code'=>404],404);
+        }
+        $id = $uid->UserID;
+        $pic = PictureTable::find($pid);
+        if(!$pic) {
+             return response()->json(['message'=>'Invalid Image','code'=>404],404);
+        }
+        unset($values['UserName']);
+        $values['UserID'] = $id;
+        $values['userAction']= '-9';
+        UserPicture::create($values);
+        return response()->json(['message'=>'Reported In APt for Image','code'=>202],202);
+
     }
 }
