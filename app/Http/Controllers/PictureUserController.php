@@ -122,7 +122,7 @@ class PictureUserController extends Controller
         $values['UserID'] = $id;
         $values['userAction']= '-9';
         UserPicture::create($values);
-        return response()->json(['message'=>'Reported In APt for Image','code'=>202],202);
+        return response()->json(['message'=>'Reported In Apt for Image','code'=>202],202);
 
     }
 }

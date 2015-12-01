@@ -22,9 +22,13 @@ class PictureTableController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $pics = PictureTable::all();
+        $sid = $request->only('UserName');
+        $x = $sid['UserName'];
+        $uname = UserTable::where('UserName','=',$x)->firstorfail();
+        $id = $uname['UserID'];
+        $pics = PictureTable::where('UserID','!=',$id)->get();
          if(!$pics) {
             return response()->json(['message' => 'Does Not Exists!!!','code' =>404],404);
         }
@@ -32,11 +36,11 @@ class PictureTableController extends Controller
     }
 public function testgallery() {
 
-    $pics = PictureTable::all();
-    foreach ($pics as $pic) {
-        echo "<img src = '/".$pic->PictureURL."' /><br>";
+    // $pics = PictureTable::all();
+    // foreach ($pics as $pic) {
+    //     echo "<img src = '/".$pic->PictureURL."' /><br>";
+    echo public_path();
     }
-}
        public function getPictures($uid,$ulat,$ulong) {
 
         $user = \App\UserTable::find($uid);
@@ -96,12 +100,12 @@ public function testgallery() {
           unset($values['ImageName']);
           unset($values['ImageExtn']);
           $values['UserId'] = $puid;
-          if(File::exists('images/'.$puid)) {
+          if(File::exists(public_path() .'/images/'.$puid)) {
             file_put_contents($path, $image);
             PictureTable::create($values);
             return response()->json(['message' => 'Successfully Added Picture','code'=>202],202);
           } else {
-            mkdir('images/'.$puid);
+            mkdir(public_path() .'/images/'.$puid);
             file_put_contents($path, $image);
             PictureTable::create($values);
             return response()->json(['message' => 'Successfully Added Picture','code'=>202],202);

@@ -32,6 +32,19 @@ class UserTableController extends Controller
         //
     }
 
+    public function changeDistance(Request $request) {
+        $uname = $request['UserName'];
+        $dist = $request['Distance'];
+        $user = UserTable::find($uname);
+        if(!$user) {
+            return response()->json(['message'=>'No Such User Found','code'=>404],404);
+        }else {
+            $user->distance = $dist;
+            $user->save();
+            return response()->json(['message'=>'Successfully Changed Distance','code'=>202],202);
+        }
+    }
+
     /**
      * Store a newly created resource in storage.
      *
