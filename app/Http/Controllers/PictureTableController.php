@@ -29,10 +29,25 @@ class PictureTableController extends Controller
         $uname = UserTable::where('UserName','=',$x)->firstorfail();
         $id = $uname['UserID'];
         $pics = PictureTable::where('UserID','!=',$id)->get();
+        //return $pics;
          if(!$pics) {
             return response()->json(['message' => 'Does Not Exists!!!','code' =>404],404);
         }
-        return response()->json(['data' => $pics]);
+        $picID = [];
+        foreach ($pics as $pic) {
+            array_push($picID, $pic['PictureID']);           
+        }
+        //return $picID;
+        $x = UserPicture::where('UserID','=',$id)->whereIn('PictureID',$picID)->get();
+        $aid = [];
+        //print_r($x);
+        foreach ($x as $y) {
+            array_push($aid, $y['PictureID']);
+        }
+        $show = PictureTable::where('UserID','!=',$id)->whereNOTIN('PictureID',$aid)->get();
+       //   $pics = PictureTable::where('UserID','!=',$id)->whereIN('PictureID',$picID)->get();
+       //   print_r($pics);
+        return response()->json(['data' => $show]);
     }
 public function testgallery() {
 
