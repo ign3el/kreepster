@@ -138,8 +138,10 @@ public function testgallery() {
             $count =  $pic->BeautyCount;
             $pic->BeautyCount = $count + 1;
             $pic->save();
+            $user = UserTable::find($uid);
+            $uname = $user->UserID;
             $userAction = new UserPicture;
-            $userAction->UserID = $uid;
+            $userAction->UserID = $uname;
             $userAction->PictureID = $pid;
             $userAction->userAction = '1';
             $userAction->save();
