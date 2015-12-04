@@ -11,10 +11,10 @@ return array(
     $vendorDir . '/nikic/php-parser/lib/bootstrap.php',
     $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
     $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Random.php',
-    $vendorDir . '/paragonie/random_compat/lib/random.php',
     $vendorDir . '/danielstjules/stringy/src/Create.php',
     $vendorDir . '/psy/psysh/src/Psy/functions.php',
     $vendorDir . '/guzzlehttp/psr7/src/functions_include.php',
+    $vendorDir . '/paragonie/random_compat/lib/random.php',
     $vendorDir . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
     $vendorDir . '/laravel/framework/src/Illuminate/Support/helpers.php',
 );

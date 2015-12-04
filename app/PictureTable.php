@@ -16,11 +16,11 @@ class PictureTable extends Model
         return $this->belongsTo('App\UserTable');
 
     }
-    public static function getByDistance($lat, $lng, $distance)
+    public static function getByDistance($lat, $lng, $distance,$uid)
 {
   $results = DB::select(DB::raw('SELECT PictureID, ( 3959 * acos( cos( radians(' . $lat . ') ) * 
   	cos( radians( latitude ) ) * cos( radians( longitude ) - radians(' . $lng . ') ) + 
-  	sin( radians(' . $lat .') ) * sin( radians(latitude) ) ) ) AS distance FROM PictureTables 
+  	sin( radians(' . $lat .') ) * sin( radians(latitude) ) ) ) AS distance FROM PictureTables where UserName != "'.$uid.'"
   HAVING distance <= ' . $distance . ' ORDER BY distance') );
   return $results;
 }

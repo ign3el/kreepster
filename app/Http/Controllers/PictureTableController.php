@@ -31,7 +31,7 @@ class PictureTableController extends Controller
         $pics = PictureTable::where('UserID','!=',$id)->get();
         //return $pics;
          if(!$pics) {
-            return response()->json(['message' => 'Does Not Exists!!!','code' =>404],404);
+            return response()->json(['message' => 'User Does Not Exists!!!','code' =>404],404);
         }
         $picID = [];
         foreach ($pics as $pic) {
@@ -40,7 +40,6 @@ class PictureTableController extends Controller
         //return $picID;
         $x = UserPicture::where('UserID','=',$id)->whereIn('PictureID',$picID)->get();
         $aid = [];
-        //print_r($x);
         foreach ($x as $y) {
             array_push($aid, $y['PictureID']);
         }
@@ -56,14 +55,18 @@ public function testgallery() {
     //     echo "<img src = '/".$pic->PictureURL."' /><br>";
     echo public_path();
     }
-       public function getPictures($uid,$ulat,$ulong) {
+       public function getPictures(Request $request) {
 
+        $uid = $request['uid'];
+        $ulat = $request['ulat'];
+        $ulong = $request['ulong'];
         $user = \App\UserTable::find($uid);
         if(!$user){
             return response()->json(['message'=>'No Such User','code'=>404],404);
         }
         $distance = $user->distance;
-        $query = PictureTable::getByDistance($ulat,$ulong,$distance);
+        $id = $user->UserID;
+        $query = PictureTable::getByDistance($ulat,$ulong,$distance,$uid);
         if(empty($query)) {
         return response()->json(['message'=>'No Image within the selected distance','code'=>404 ],404);
         }
@@ -75,8 +78,15 @@ public function testgallery() {
         }
 
          //Get the listings that match the returned ids
-        $results =PictureTable::whereIn('PictureID', $ids)->get();
-        return response()->json(['message'=>'Success','Images'=>$results,'code'=>200],200);
+        $x = UserPicture::where('UserID','=',$id)->whereIn('PictureID',$ids)->get();
+        $aid = [];
+        foreach ($x as $y) {
+            array_push($aid, $y['PictureID']);
+        }
+        $show = PictureTable::where('UserName','!=',$uid)->whereNOTIN('PictureID',$aid)->get();
+
+        //$results =PictureTable::whereIn('PictureID', $ids)->get();
+        return response()->json(['message'=>'Success','Images'=>$show,'code'=>200],200);
     }
 
     /**
@@ -192,7 +202,7 @@ public function testgallery() {
     {
         $pics = PictureTable::find($id);
          if(!$pics) {
-            return response()->json(['message' => 'Does Not Exists!!!','code' =>404],404);
+            return response()->json(['message' => 'Picture Does Not Exists!!!','code' =>404],404);
         }
         return response()->json(['data' => $pics]);
     }

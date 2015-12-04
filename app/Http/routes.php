@@ -22,7 +22,7 @@ Route::resource('/UserPicture','UserPictureController');
 Route::resource('UserTable.PictureTable' , 'PictureUserController');
 Route::post('/PictureTable/{PictureID?}/Action/{action?}/{uid?}', 'PictureTableController@action');
 Route::get('/PictureRank/TopRating/{type?}','PictureTableController@rating');
-Route::get('/PictureTable/getPictures/{uid?}/{ulat?}/{ulong?}','PictureTableController@getPictures');
+Route::get('/Pictures/getPictures','PictureTableController@getPictures');
 Route::get('/TestGallery','PictureTableController@testgallery');
 Route::post('/FlagInApt','PictureUserController@reportImage');
 Route::post('/UserTable/ChangeDistance','UserTableController@changeDistance');
