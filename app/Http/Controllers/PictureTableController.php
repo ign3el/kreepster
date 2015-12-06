@@ -83,7 +83,7 @@ public function testgallery() {
         foreach ($x as $y) {
             array_push($aid, $y['PictureID']);
         }
-        $show = PictureTable::where('UserName','!=',$uid)->whereNOTIN('PictureID',$aid)->get();
+        $show = PictureTable::where('UserName','!=',$uid)->whereIN('PictureID',$ids)->whereNOTIN('PictureID',$aid)->get();
 
         //$results =PictureTable::whereIn('PictureID', $ids)->get();
         return response()->json(['message'=>'Success','Images'=>$show,'code'=>200],200);
