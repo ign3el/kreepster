@@ -142,11 +142,11 @@ public function testgallery() {
 
         if($type == "beauty") {
 
-            $pic = PictureTable::orderby('BeautyCount','DESC')->take(5)->get();
+            $pic = PictureTable::orderby('BeautyCount','DESC')->take(9)->get();
             return response()->json(['data'=>$pic,'code'=>200],200);
 
         }else if($type == "kreepy") {
-            $pic = PictureTable::orderby('KreepCount','DESC')->take(5)->get();
+            $pic = PictureTable::orderby('KreepCount','DESC')->take(9)->get();
             return response()->json(['data'=>$pic,'code'=>200],200);
         }else {
             return response()->json(['message'=>'Invalid Entry','code'=>404],404);
