@@ -13,7 +13,6 @@ class Authenticate
      * @var Guard
      */
     protected $auth;
-
     /**
      * Create a new filter instance.
      *

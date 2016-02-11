@@ -24,6 +24,14 @@ class PictureTable extends Model
   HAVING distance <= ' . $distance . ' ORDER BY distance') );
   return $results;
 }
+  public static function getAllDistance($lat, $lng,$uid)
+{
+  $results = DB::select(DB::raw('SELECT PictureID, ( 3959 * acos( cos( radians(' . $lat . ') ) * 
+    cos( radians( latitude ) ) * cos( radians( longitude ) - radians(' . $lng . ') ) + 
+    sin( radians(' . $lat .') ) * sin( radians(latitude) ) ) ) AS distance FROM PictureTables where UserName != "'.$uid.'"
+   ORDER BY distance') );
+  return $results;
+}
 	public function distance_haversine($lapublit1, $lon1, $lat2, $lon2) {
 
       $earth_radius = 3960.00; # in miles

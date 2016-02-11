@@ -55,6 +55,57 @@ public function testgallery() {
     //     echo "<img src = '/".$pic->PictureURL."' /><br>";
     echo public_path();
     }
+
+       public function getAllPictures(Request $request) {
+
+        $uid = $request['uid'];
+        $ulat = $request['ulat'];
+        $ulong = $request['ulong'];
+        $user = \App\UserTable::find($uid);
+        if(!$user){
+            return response()->json(['message'=>'No Such User','code'=>404],404);
+        }
+        $distance = $user->distance;
+        $id = $user->UserID;
+        $query = PictureTable::getAllDistance($ulat,$ulong,$uid);
+        if(empty($query)) {
+        return response()->json(['message'=>'No Image within the selected distance','code'=>404 ],404);
+        }
+
+        $ids = [];
+        $distances = [];
+       foreach($query as $q)
+       {
+          array_push($ids, $q->PictureID);
+          array_push($distances, $q->distance);
+
+        }
+
+         //Get the listings that match the returned ids
+        $x = UserPicture::where('UserID','=',$id)->whereIn('PictureID',$ids)->get();
+        $aid = [];
+        foreach ($x as $y) {
+            array_push($aid, $y['PictureID']);
+        }
+        $show = PictureTable::where('UserName','!=',$uid)->whereNOTIN('PictureID',$aid)->get();
+        //print_r($show);
+        $actualID = [];
+        $actualDistances = [];
+        foreach($show as $s) {
+            foreach($query as $q)
+              {
+                  if($s->PictureID == $q->PictureID) {
+                    // array_push($actualID, $q->PictureID);
+                    // array_push($actualDistances, $q->distance);
+                    $s['Distance'] = $q->distance;
+                  }
+            }
+        }
+        //print_r($result);
+        //$results =PictureTable::whereIn('PictureID', $ids)->get();
+        return response()->json(['message'=>'Success','Images'=>$show,'code'=>200],200);
+
+       }
        public function getPictures(Request $request) {
 
         $uid = $request['uid'];
@@ -72,9 +123,12 @@ public function testgallery() {
         }
 
         $ids = [];
+        $distances = [];
        foreach($query as $q)
        {
           array_push($ids, $q->PictureID);
+          array_push($distances, $q->distance);
+
         }
 
          //Get the listings that match the returned ids
@@ -84,7 +138,20 @@ public function testgallery() {
             array_push($aid, $y['PictureID']);
         }
         $show = PictureTable::where('UserName','!=',$uid)->whereIN('PictureID',$ids)->whereNOTIN('PictureID',$aid)->get();
-
+        //print_r($show);
+        $actualID = [];
+        $actualDistances = [];
+        foreach($show as $s) {
+            foreach($query as $q)
+              {
+                  if($s->PictureID == $q->PictureID) {
+                    // array_push($actualID, $q->PictureID);
+                    // array_push($actualDistances, $q->distance);
+                    $s['Distance'] = $q->distance;
+                  }
+            }
+        }
+        //print_r($result);
         //$results =PictureTable::whereIn('PictureID', $ids)->get();
         return response()->json(['message'=>'Success','Images'=>$show,'code'=>200],200);
     }
