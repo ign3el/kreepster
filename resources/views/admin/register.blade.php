@@ -1,6 +1,4 @@
-@extends('master')
-@section('title', 'ADD ADMIN')
-@section('content')
+
     <section id="main" class="column">
     <link href="../Css/css2/bootstrap.css" rel="stylesheet">
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -30,13 +28,13 @@
   <div class="form-group">
                         <label for="name" class="col-lg-2 control-label">First Name</label>
                         <div class="col-lg-10">
-                            <input type="name" class="form-control" id="firstname" placeholder="First Name" name="FirstName" value="{{ old('FirstName') }}">
+                            <input type="name" class="form-control" id="FirstName" placeholder="First Name" name="FirstName" value="{{ old('FirstName') }}">
                         </div>
                     </div>
 					  <div class="form-group">
                         <label for="name" class="col-lg-2 control-label">Last Name</label>
                         <div class="col-lg-10">
-                            <input type="name" class="form-control" id="lastname" placeholder="Last Name" name="LastName" value="{{ old('LastName') }}">
+                            <input type="name" class="form-control" id="LastName" placeholder="Last Name" name="LastName" value="{{ old('LastName') }}">
                         </div>
                     </div>
 					
@@ -65,4 +63,3 @@
         </div>
     </div>
 	</section>
-@endsection

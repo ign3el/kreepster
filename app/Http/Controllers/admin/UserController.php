@@ -32,8 +32,8 @@ class UserController extends Controller
         return view('admin.users',compact('users','colName'));
     }
     public function pics($id) {
-        $images = \App\tbl_UserPicture::where('UserId','=',$id)->orderBy('UserId', 'asc')->paginate(5);
-        $user = \App\tbl_User::whereUserid($id)->firstorfail();
+        $images = \App\UserPicture::where('UserId','=',$id)->orderBy('UserId', 'asc')->paginate(5);
+        $user = \App\UserTable::whereUserid($id)->firstorfail();
         return view('admin.UserPics.showUserPics', compact('images','user'));
     }
     /**
@@ -65,8 +65,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = \App\tbl_User::whereUserid($id)->first();
-        $colName = DB::select(" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'tbl_Users';");
+        $user = \App\UserTable::whereUsername($id)->first();
+        $colName = DB::select(" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'UserTables';");
         return view('admin.showUser',compact('user','colName'));
     }
 

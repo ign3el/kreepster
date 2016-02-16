@@ -23,10 +23,14 @@ class AdminController extends Controller
      */
     public function index()
     {
-                return view('admin.admins');
+                       $images = \App\PictureTable::select()->paginate(10);
+       return view('admin.UserPics.index',compact('images'));
     }
 	public function admin() {
-		return view('admin.admins');
+		
+        $admin = \App\User::select()->paginate(5);
+        $colName = DB::select(" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'Admins';");
+        return view('admin.admins',compact('admin','colName'));
 	}
     /**
      * Show the form for creating a new resource.
@@ -56,13 +60,13 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
 	 public function changepwd($userName) {
-		 $admin = \App\tbl_Admin::whereUsername($userName)->first();
+		 $admin = \App\User::whereUsername($userName)->first();
 		 return view('admin.changepwd',compact('admin'));
 	 }
     public function show($userName)
     {
-        $admin = \App\tbl_Admin::whereUsername($userName)->first();
-		$colName = DB::select(" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'tbl_Admins';");
+        $admin = \App\User::whereUsername($userName)->first();
+		$colName = DB::select(" SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = 'Admins';");
 		return view('admin.showAdmin',compact('admin','colName'));
     }
 
@@ -74,7 +78,7 @@ class AdminController extends Controller
      */
     public function edit(ChangePwdFormRequest $request , $userName)
     {
-         $admin = \App\tbl_Admin::whereUsername($userName)->first();
+         $admin = \App\User::whereUsername($userName)->first();
 		 $admin->password = Hash::make($request->get('password'));
 		 $admin->save();
 		    $url = Session()->get('adminurl');
@@ -90,12 +94,12 @@ class AdminController extends Controller
      */
     public function update(AdminFormRequest $request, $id)
     {
-        $admin = \App\tbl_Admin::whereUsername($id)->firstOrFail();
+        $admin = \App\User::whereUsername($id)->firstOrFail();
 		$admin->remember_token = $request->get('remember_token');
 		$admin->FirstName = $request->get('FirstName');
-		$admin->MiddleName = $request->get('MiddleName');
+		$admin->email = $request->get('email');
 		$admin->LastName = $request->get('LastName');
-		$admin->lastUpdatedBy = Auth::user()->FirstName;
+		$admin->lastUpdatedBy = Auth::user()->FirstName." ".Auth::user()->LastName;
 		$res = $admin->save();
 		return Redirect::back()->with('status', 'Updated Succesful!');
     }
@@ -109,8 +113,8 @@ class AdminController extends Controller
 	 protected function validator(array $data)
     {
         return Validator::make($data, [
-            'userName' => 'required|max:255|unique:users',
-            'email' => 'email|max:255|unique:users',
+            'userName' => 'required|max:255|unique:Admins',
+            'email' => 'email|max:255|unique:Admins',
 			'FirstName' => 'required|max:25',
 			'LastName' => 'max:25',
             'password' => 'required|confirmed|min:6',
@@ -131,8 +135,8 @@ class AdminController extends Controller
         }
 		\App\User::create([
             'username' => $request['userName'],
-            'name' => $request['FirstName'],
-			//'LastName' => $request['LastName'],
+            'FirstName' => $request['FirstName'],
+			'LastName' => $request['LastName'],
 			'email' => $request['email'],
             'password' => Hash::make($request['password']),
         ]);
@@ -145,10 +149,10 @@ class AdminController extends Controller
     public function destroy($id)
     {
        $user = Auth::user();
-	   if($user->userName == $id) {
+	   if($user->username == $id) {
 		   return Redirect::to(Session()->get('backUrl'))->with('status', 'You are Logged in With This Admin ID. Change ID to Delete This Admin Account!!'); 
 	   } else {
-		DB::table('tbl_Admins')->where('userName', '=', $id)->delete();
+		DB::table('Admins')->where('username', '=', $id)->delete();
 	   return Redirect::to(Session()->get('backUrl'))->with('status', 'Successfully Deleted Admin : '.$id); 
 	   }
     }

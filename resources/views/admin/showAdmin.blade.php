@@ -3,7 +3,7 @@
 @section('content')
 
    <section id="main" class="column">
-   <form method="post" action={!! action('admin\AdminController@update', $admin->userName ) !!}  class="pull-left">
+   <form method="post" action={!! action('admin\AdminController@update', $admin->username ) !!}  class="pull-left">
                 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 <div class="table-responsive" width = "750">
 <table class="table table-bordered table-striped table-condensed fsop table-hover">
@@ -19,10 +19,10 @@
 @foreach($colName as $col)
 <tr><td> {{ $col->COLUMN_NAME }} </td>
 <?php $a=$col->COLUMN_NAME; ?>
-@if($col->COLUMN_NAME == 'userName')
-<?php $userName = $admin->$a ;?>
+@if($col->COLUMN_NAME == 'username')
+<?php $username = $admin->$a ;?>
 @endif
-@if($col->COLUMN_NAME =='userName' or $col->COLUMN_NAME == 'created_at' or $col->COLUMN_NAME == 'updated_at' or $col->COLUMN_NAME == 'lastLoggedIn' or $col->COLUMN_NAME == 'lastUpdatedBy' or $col->COLUMN_NAME == 'password')
+@if($col->COLUMN_NAME =='username' or $col->COLUMN_NAME == 'created_at' or $col->COLUMN_NAME == 'updated_at' or $col->COLUMN_NAME == 'lastLoggedIn' or $col->COLUMN_NAME == 'lastUpdatedBy' or $col->COLUMN_NAME == 'password')
 <td>{{ $admin->$a }}</td>
 @else
 <td><input type = "text" name ="{{$a}}" value = "{{ $admin->$a }}" /></td>
@@ -35,7 +35,7 @@
                         
                                 <button type="submit" class="btn btn-info">Update</button>
                           </form>
-						  <form method="post" action={!! action('admin\AdminController@destroy',$admin->userName) !!}  class="pull-right">
+						  <form method="post" action={!! action('admin\AdminController@destroy',$admin->username) !!}  class="pull-right">
                 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                         <div class="form-group">
                             <div>
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                 </form>
-				<form method="get" action={!! action('admin\AdminController@changepwd',$admin->userName) !!}  class="pull-right">
+				<form method="get" action={!! action('admin\AdminController@changepwd',$admin->username) !!}  class="pull-right">
                 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                         <div class="form-group">
                             <div>

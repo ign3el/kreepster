@@ -56,14 +56,14 @@ $user = Auth::user();
 ?>
 	<header id="header">
 		<hgroup>
-			<h1 class="site_title"><a href="Dashboard.php">Website Admin</a></h1>
-			<h2 class="section_title">Dashboard</h2><div class="btn_view_site"><a href="http://www.ShortOnPeople.com">View Site</a></div>
+			<h1 class="site_title"><a href="/">Website Admin</a></h1>
+			<h2 class="section_title">Dashboard</h2><div class="btn_view_site"><a href="http://www.kreepster.com">View Site</a></div>
 		</hgroup>
 	</header> <!-- end of header bar -->
 	
 	<section id="secondary_bar">
 		<div class="user">
-			<p><?php echo $user->name ?></p>
+			<p><?php echo $user->FirstName ?></p>
 			<a class="logout_user" href="/auth/logout" title="Logout">Logout</a>
 		</div>
 		<div class="breadcrumbs_container">
@@ -81,65 +81,24 @@ $user = Auth::user();
 			<li class="icn_edit_article"><a href="/admin/Users">Users</a></li>
 			
 		</ul>
-		<h3>User Devices</h3>
-        <ul class="toggle">
-            <li class="icn_edit_article"><a href="/admin/UserDevices">View User Devices</a></li>
-      
-        </ul>
-		<h3>Night Life </h3>
-		<ul class="toggle">
-			<li class="icn_photo"><a href="/admin/Bars">Bars</a></li>
-			<li class="icn_photo"><a href="/admin/Lounge">Lounge</a></li>
-			<li class="icn_photo"><a href="/admin/Clubs">Clubs</a></li>
-			<li class="icn_photo"><a href="/admin/AddConcept">Add Concepts</a></li>
-		</ul>
-		<h3>Sports Club</h3>
-        <ul class="toggle">
-            <li class="icn_photo"><a href="/admin/Football">Football</a></li>
-			<li class="icn_photo"><a href="/admin/Basketball">Basketball</a></li>
-			<li class="icn_photo"><a href="/admin/Tennis">Tennis</a></li>
-			<li class="icn_photo"><a href="/admin/AddConcept">Add Concepts</a></li>
-        </ul>
+
 		<h3>Admins</h3>
 		<ul class="toggle">
             <li class="icn_edit_article"><a href="/admin/Admins">Admin Users</a></li>
 		</ul>
-        <h3>Night Life Pictures</h3>
-        <ul class="toggle">
-            <li class="icn_folder"><a href="/admin/NightLifePics/nightLife">File Manager</a></li>
-
-        </ul>
-        <h3>Sports Club Pictures</h3>
-        <ul class="toggle">
-            <li class="icn_folder"><a href="/admin/SportsPics/sports">File Manager</a></li>
-      
-        </ul>
-		<h3>User Pictures</h3>
-        <ul class="toggle">
-            <li class="icn_folder"><a href="/admin/UserPictures">File Manager</a></li>
-      
-        </ul>
-		<h3>Table Requests/Posts</h3>
-        <ul class="toggle">
-            <li class="icn_edit_article"><a href="/admin/TableRequests">Table Requests</a></li>
-			<li class="icn_edit_article"><a href="/admin/TablePosts">Table Posts</a></li>
-        </ul>
-	
-		<h3>Notifications</h3>
-        <ul class="toggle">
-            <li class="icn_edit_article"><a href="/admin/Notifications">Select Notoficatios Table</a></li>
-      
-        </ul>
-		<h3>Notification Types</h3>
-        <ul class="toggle">
-            <li class="icn_edit_article"><a href="/admin/NotificationTypes">Select Notification Types Table</a></li>
-      
-        </ul>
-		<h3>Import/Export </h3>
+		<h3>Images </h3>
+		<ul class="toggle">
+			<li class="icn_photo"><a href="/admin/Images/allImages">View All Images</a></li>
+			<li class="icn_photo"><a href="/admin/Images/topBeauty">View Top 10 Beuty Images</a></li>
+			<li class="icn_photo"><a href="/admin/Images/topKreepy">View Top 10 Kreepy Images</a></li>
+			<li class="icn_photo"><a href="/admin/Images/allInaptImages">View InAppropriate Images</a></li>
+			
+		</ul>
+<!-- 		<h3>Import/Export </h3>
 		<ul class="toggle">
 			<li class="icn_photo"><a href="/admin/Import">Import</a></li>
 			<li class="icn_photo"><a href="/admin/Export">Export</a></li>
 			
-		</ul>
+		</ul> -->
 	</aside><!-- end of sidebar -->
 	

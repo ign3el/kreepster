@@ -40,8 +40,8 @@
 @foreach($colName as $col)
 <td>
 <?php $a=$col->COLUMN_NAME; ?>
-@if($a == 'id')
- <a href="{!! action('admin\UserController@show', $value->id) !!}" style="text-align:center; display:block;">{{ $value->$a }}</a>
+@if($a == 'UserName')
+ <a href="{!! action('admin\UserController@show', $value->UserName) !!}" style="text-align:center; display:block;">{{ $value->$a }}</a>
 @else
 	{{ $value->$a }}
 @endif

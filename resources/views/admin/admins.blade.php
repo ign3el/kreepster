@@ -16,9 +16,37 @@
 @if (session('status'))
 <div class="alert alert-success">
 {{ session('status') }}
-@endif
 </div>
+@endif
+@foreach($colName as $col)
 
+@if($col->COLUMN_NAME != 'remember_token' and $col->COLUMN_NAME != 'password')
+	<th>
+{{ $col->COLUMN_NAME  }}
+</th>
+@endif
+
+@endforeach
+
+<tr>
+@foreach($admin as $key=>$value)
+@foreach($colName as $col)
+
+<?php $a=$col->COLUMN_NAME; ?>
+@if($a == 'username')
+	<td>
+ <a href="{!! action('admin\AdminController@show', $value->username) !!}" style="text-align:center; display:block;">{{ $value->$a }}</a>
+ </td>
+@elseif($a!='remember_token' and $a != 'password')
+	<td>{{ $value->$a }}</td>
+@endif
+
+
+
+@endforeach
+</tr>
+@endforeach
+{!! $admin->render() !!}
 </table>
 </div>		
 </section>
