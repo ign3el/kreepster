@@ -24,6 +24,8 @@ class UserController extends Controller
          return view('admin.users',compact('users','colName'));
          
      }
+
+
     public function index()
     {
         $users = \App\UserTable::paginate(5);
@@ -31,10 +33,11 @@ class UserController extends Controller
         
         return view('admin.users',compact('users','colName'));
     }
+
+
     public function pics($id) {
-        $images = \App\UserPicture::where('UserId','=',$id)->orderBy('UserId', 'asc')->paginate(5);
-        $user = \App\UserTable::whereUserid($id)->firstorfail();
-        return view('admin.UserPics.showUserPics', compact('images','user'));
+        $images = \App\PictureTable::where('UserID','=',$id)->paginate(10);
+        return view('admin.UserPics.index', compact('images'));
     }
     /**
      * Show the form for creating a new resource.
@@ -90,11 +93,11 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $user = \App\tbl_User::whereUserid($id)->first();
-         if($user->IsUserActive){
-              $user->IsUserActive = 0;  
+         $user = \App\UserTable::whereUserid($id)->first();
+         if($user->isActive){
+              $user->isActive = 0;  
          } else {
-              $user->IsUserActive = 1; 
+              $user->isActive = 1; 
          }
         $user->save();
         return Redirect::back()->with('status', 'Updated Succesful!');
@@ -108,7 +111,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user = \App\tbl_User::whereUserid($id)->first();
+        $user = \App\UserTable::whereUserid($id)->first();
         $user->delete();
         $url = Session()->get('backUrl');
        return Redirect::to(Session()->get('backUrl'))->with('status', 'Successfully Deleted User : '.$id); 

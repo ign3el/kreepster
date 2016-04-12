@@ -1,6 +1,6 @@
 @extends('master')
 @section('title', 'Users')
-
+{{Session::put('backUrl',Request::fullUrl())}}
 @section('content')
 
 
@@ -20,7 +20,6 @@
 
 <div class="table-responsive" width = "750">
 <table class="table col-sm-12 table-bordered table-striped table-condensed fsop">
-{{Session::put('backUrl',Request::fullUrl())}}
 @foreach ($errors->all() as $error)
 <p class="alert alert-danger">{{ $error }}</p>
 @endforeach

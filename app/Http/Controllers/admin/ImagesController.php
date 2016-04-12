@@ -54,8 +54,8 @@ class ImagesController extends Controller
 
         $images = \App\UserPicture::where('userAction','=','-9')->paginate(10);
         foreach($images as $image) {
-            $uid = \App\UserTable::whereUserid($image->UserID)->FirstorFail();
-            $image['MarkedBy'] = $uid->UserName;
+           // $uid = \App\UserTable::whereUserid($image->UserID)->FirstorFail();
+            $image['MarkedBy'] = $image->UserID;
             $pic = \App\PictureTable::wherePictureid($image->PictureID)->FirstorFail();
             $image['PictureURL'] = $pic->PictureURL;
             $image['BeautyCount'] = $pic->BeautyCount;
@@ -68,25 +68,13 @@ class ImagesController extends Controller
 
     public function topBeauty() {
                $images = \App\PictureTable::orderby('BeautyCount','DESC')->take(10)->get();
-               foreach($images as $image) {
-                $uid = \App\UserTable::whereUserid($image->UserID)->FirstorFail();
-                $image['PostedBy'] = $uid->UserName;
-                //echo $uid->FirsName;
-       }
-       //print_r($images);
-       return view('admin.UserPics.topBeauty',compact('images'));
+               return view('admin.UserPics.topBeauty',compact('images'));
 
     }
 
         public function topKreepy() {
                $images = \App\PictureTable::orderby('KreepCount','DESC')->take(10)->get();
-               foreach($images as $image) {
-                $uid = \App\UserTable::whereUserid($image->UserID)->FirstorFail();
-                $image['PostedBy'] = $uid->UserName;
-                //echo $uid->FirsName;
-       }
-       //print_r($images);
-       return view('admin.UserPics.topKreepy',compact('images'));
+                return view('admin.UserPics.topKreepy',compact('images'));
 
     }
 

@@ -28,7 +28,7 @@
         <div class="panel panel-default">
             <table class="table">
                 <tr>
-                    <th>Id </th>
+                    <th>Picture ID </th>
                     <th>Posted-By ID </th>
                     <th>Marked-By ID </th>
                     <th>Thumbnail </th>

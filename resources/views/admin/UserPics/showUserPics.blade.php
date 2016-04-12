@@ -1,5 +1,5 @@
 @extends('master')
-
+@section('title', 'UserPics')
 @section('content')
     <section id="main" class="column">
         @foreach ($errors->all() as $error)
@@ -29,35 +29,28 @@
                             <th>Id </th>
                             <th>UserID </th>
                             <th>Thumbnail </th>
-                            <th>IS_ACTIVE</th>
-                            <th>Make Active </th>
                             <th>Delete </th>
                         </tr>
                         @foreach($images as $image )
 
                             <tr>
                                 <td>
-                                    {{ $image->U_PictureId }}
+                                    {{ $image->PictureID }}
                                 </td>
                                 <td>
-                                            {{ $user->FirstName }}
+                                            {{ $image->UserName }}
                                 </td>
 
                                 <td>
-                                    <img src="/{{ $image->PictureLink }}" width = "50px" height = "50px">  </td>
-                                <td>{{ $image->IsPictureActive }}</td>
-                                <td>  <a href="/admin/UserPictures/{{ $image->U_PictureId }}/edit">
-                                <span class="glyphicon glyphicon-edit"
-                                      aria-hidden="true"> </span> </a> </td>
-                                <td>{!! Form::model($image, ['route' => ['admin.UserPictures.destroy', $image->U_PictureId],
-                                    'method' => 'DELETE'
-                      ]) !!}
-                                    <div class="form-group">
-
-                                        {!! Form::submit('Delete', array('class'=>'btn btn-danger', 'Onclick' => 'return ConfirmDelete();')) !!}
-
-                                    </div>
-                                    {!! Form::close() !!} </td>
+                                    <img src="/{{ $image->PictureURL }}" width = "100px" height = "100px">  </td>
+                                <td> <form method="post" action={!! action('admin\ImagesController@destroy',$image->PictureID) !!} >
+                <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                        <div class="form-group">
+                            <div>
+                                <button type="submit" class="btn btn-success" Onclick = 'return ConfirmDelete();'>Delete</button>
+                            </div>
+                        </div>
+                </form>
                             </tr>
 
                         @endforeach

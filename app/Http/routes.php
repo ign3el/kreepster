@@ -61,6 +61,11 @@ Route::post('/admin/Users/', [
     'middleware' => 'auth',
     'uses' => 'admin\UserController@search'
 ]);
+Route::get('/admin/Users/{UserId?}/pics', [
+    'middleware' => 'auth',
+    'uses' => 'admin\UserController@pics'
+	
+]);
 Route::get('/admin/Users/{UserId?}', [
     'middleware' => 'auth',
     'uses' => 'admin\UserController@show'

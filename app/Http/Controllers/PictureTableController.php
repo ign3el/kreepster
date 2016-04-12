@@ -87,7 +87,7 @@ public function testgallery() {
         foreach ($x as $y) {
             array_push($aid, $y['PictureID']);
         }
-        $show = PictureTable::where('UserName','!=',$uid)->whereNOTIN('PictureID',$aid)->get();
+        $show = PictureTable::where('UserName','!=',$uid)->whereNOTIN('PictureID',$aid)->take(15)->get();
         //print_r($show);
         $actualID = [];
         $actualDistances = [];
@@ -177,6 +177,7 @@ public function testgallery() {
     {
         $values = $request->all();
          $uname = $values['UserName'];
+        
          //print_r($uname);
          $uid = UserTable::find($uname);
 
@@ -184,21 +185,42 @@ public function testgallery() {
             return response()->json(['message'=>'No Such User Found','code'=>404],404);
          } else {
          $puid = $uid->UserID;
-          $img64 = $values['PictureUrl'];
+          $img64 = $values['PictureUrl'];   
           $image = base64_decode($img64);
           $image_name= $values['ImageName'].".".$values['ImageExtn'];
           $path = public_path() . "/images/".$puid."/" . $image_name;
-          $values['PictureUrl'] = "images/".$puid."/".$image_name;
-          unset($values['ImageName']);
+          $values['PictureUrl'] = "images/".$puid."/".$image_name; 
+
+
+
+          if($values['isVideo'] == 1){
+               $tbnlImg64 = $values['TbnlURL']; 
+               $tbnlImg = base64_decode($tbnlImg64);
+               $tbnl_image_name= $values['ImageName']."_tbnl".".".$values['tbnl_ImageExtn'];
+               $tbnlpath = public_path() . "/images/".$puid."/" . $tbnl_image_name;
+               $values['TbnlURL'] = "images/".$puid."/".$tbnl_image_name;
+               
+
+
+}
           unset($values['ImageExtn']);
+          unset($values['ImageName']);
+          unset($values['tbnl_ImageExtn']);
+
           $values['UserId'] = $puid;
           if(File::exists(public_path() .'/images/'.$puid)) {
             file_put_contents($path, $image);
+            if($values['isVideo'] ==1) {
+                file_put_contents($tbnlpath, $tbnlImg);
+            }
             PictureTable::create($values);
             return response()->json(['message' => 'Successfully Added Picture','code'=>202],202);
           } else {
             mkdir(public_path() .'/images/'.$puid);
             file_put_contents($path, $image);
+                        if($values['isVideo'] ==1) {
+                file_put_contents($tbnlpath, $tbnlImg);
+            }
             PictureTable::create($values);
             return response()->json(['message' => 'Successfully Added Picture','code'=>202],202);
           }

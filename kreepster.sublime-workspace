@@ -4,8 +4,40 @@
 		"selected_items":
 		[
 			[
+				"UserP",
+				"UserPics	(ImagesController.php)"
+			],
+			[
+				"Posted",
+				"PostedBy	(ImagesController.php)"
+			],
+			[
+				"Kree",
+				"KreepCount"
+			],
+			[
+				"Bea",
+				"BeautyCount"
+			],
+			[
+				"allI",
+				"allInaptImages"
+			],
+			[
+				"User",
+				"UserPicture〔class〕"
+			],
+			[
+				"Beayt",
+				"BeautyCount	(PictureTableController.php)"
+			],
+			[
+				"back",
+				"backUrl	(ImagesController.php)"
+			],
+			[
 				"dist",
-				"distances"
+				"distance"
 			],
 			[
 				"Pictu",
@@ -42,10 +74,6 @@
 			[
 				"reque",
 				"request"
-			],
-			[
-				"User",
-				"UserTable〔class〕"
 			],
 			[
 				"vale",
@@ -91,7 +119,7 @@
 			"file": "app/Http/Controllers/PictureTableController.php",
 			"settings":
 			{
-				"buffer_size": 8346,
+				"buffer_size": 10126,
 				"line_ending": "Unix"
 			}
 		},
@@ -115,18 +143,10 @@
 			}
 		},
 		{
-			"file": "app/Http/Controllers/MyAPI.php",
-			"settings":
-			{
-				"buffer_size": 1744,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/PictureTable.php",
 			"settings":
 			{
-				"buffer_size": 1357,
+				"buffer_size": 1772,
 				"line_ending": "Unix"
 			}
 		},
@@ -134,12 +154,266 @@
 			"file": "app/Http/routes.php",
 			"settings":
 			{
-				"buffer_size": 1186,
+				"buffer_size": 4226,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"file": "app/Http/Controllers/admin/ImagesController.php",
+			"settings":
+			{
+				"buffer_size": 3798,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/admin/UserPics/allinaptimages.blade.php",
+			"settings":
+			{
+				"buffer_size": 2781,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/admin/UserPics/topKreepy.blade.php",
+			"settings":
+			{
+				"buffer_size": 2649,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/admin/UserPics/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 2676,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/admin/UserPics/showUserPics.blade.php",
+			"settings":
+			{
+				"buffer_size": 2800,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/admin/UserPics/topBeauty.blade.php",
+			"settings":
+			{
+				"buffer_size": 2649,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "config/app.php",
+			"settings":
+			{
+				"buffer_size": 8732,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 6599 files for \"\\App\\Admin\"\n\nD:\\AppDevelopment\\htdocs\\Code\\kreepster\\storage\\logs\\laravel.log:\n 18078  #11 /home/vagrant/Code/kreepster/artisan(0): {main}()\n 18079  #12 {main}  \n 18080: [2016-02-16 23:02:12] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18081  Stack trace:\n 18082  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18123  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18124  #42 {main}  \n 18125: [2016-02-16 23:02:21] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18126  Stack trace:\n 18127  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18168  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18169  #42 {main}  \n 18170: [2016-02-16 23:02:24] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18171  Stack trace:\n 18172  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18213  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18214  #42 {main}  \n 18215: [2016-02-16 23:02:29] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18216  Stack trace:\n 18217  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18258  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18259  #42 {main}  \n 18260: [2016-02-16 23:02:33] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18261  Stack trace:\n 18262  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18303  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18304  #42 {main}  \n 18305: [2016-02-16 23:06:00] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18306  Stack trace:\n 18307  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18348  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18349  #42 {main}  \n 18350: [2016-02-16 23:06:02] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18351  Stack trace:\n 18352  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18393  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18394  #42 {main}  \n 18395: [2016-02-16 23:06:51] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18396  Stack trace:\n 18397  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18438  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18439  #42 {main}  \n 18440: [2016-02-16 23:09:57] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18441  Stack trace:\n 18442  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18483  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18484  #42 {main}  \n 18485: [2016-02-16 23:10:06] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18486  Stack trace:\n 18487  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n\n10 matches in 1 file\n\n\nSearching 6650 files for \"App\\Admin\"\n\nD:\\AppDevelopment\\htdocs\\Code\\kreepster\\storage\\logs\\laravel.log:\n 18078  #11 /home/vagrant/Code/kreepster/artisan(0): {main}()\n 18079  #12 {main}  \n 18080: [2016-02-16 23:02:12] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18081  Stack trace:\n 18082  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18123  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18124  #42 {main}  \n 18125: [2016-02-16 23:02:21] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18126  Stack trace:\n 18127  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18168  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18169  #42 {main}  \n 18170: [2016-02-16 23:02:24] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18171  Stack trace:\n 18172  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18213  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18214  #42 {main}  \n 18215: [2016-02-16 23:02:29] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18216  Stack trace:\n 18217  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18258  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18259  #42 {main}  \n 18260: [2016-02-16 23:02:33] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18261  Stack trace:\n 18262  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18303  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18304  #42 {main}  \n 18305: [2016-02-16 23:06:00] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18306  Stack trace:\n 18307  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18348  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18349  #42 {main}  \n 18350: [2016-02-16 23:06:02] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18351  Stack trace:\n 18352  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18393  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18394  #42 {main}  \n 18395: [2016-02-16 23:06:51] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18396  Stack trace:\n 18397  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18438  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18439  #42 {main}  \n 18440: [2016-02-16 23:09:57] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18441  Stack trace:\n 18442  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n .....\n 18483  #41 /home/vagrant/Code/kreepster/public/index.php(0): {main}()\n 18484  #42 {main}  \n 18485: [2016-02-16 23:10:06] local.ERROR: exception 'Symfony\\Component\\Debug\\Exception\\FatalErrorException' with message 'Class '\\App\\Admin' not found' in /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Auth/EloquentUserProvider.php:126\n 18486  Stack trace:\n 18487  #0 /home/vagrant/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(133): Symfony\\Component\\Debug\\Exception\\FatalErrorException->__construct()\n\n10 matches in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 11743,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "app/Http/Controllers/admin/UserController.php",
+			"settings":
+			{
+				"buffer_size": 3173,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/admin/users.blade.php",
+			"settings":
+			{
+				"buffer_size": 1357,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/admin/showUser.blade.php",
+			"settings":
+			{
+				"buffer_size": 2342,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/master.blade.php",
+			"settings":
+			{
+				"buffer_size": 859,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/Auth/AuthController.php",
+			"settings":
+			{
+				"buffer_size": 1737,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+			"settings":
+			{
+				"buffer_size": 205,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
+			"settings":
+			{
+				"buffer_size": 4290,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php",
+			"settings":
+			{
+				"buffer_size": 403,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\nnamespace Illuminate\\Foundation\\Auth;\n\nuse Illuminate\\Http\\Request;\nuse Illuminate\\Support\\Facades\\Auth;\n\ntrait RegistersUsers\n{\n    use RedirectsUsers;\n\n    /**\n     * Show the application registration form.\n     *\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function getRegister()\n    {\n        return view('auth.register');\n    }\n\n    /**\n     * Handle a registration request for the application.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function postRegister(Request $request)\n    {\n        $validator = $this->validator($request->all());\n\n        if ($validator->fails()) {\n            $this->throwValidationException(\n                $request, $validator\n            );\n        }\n\n        Auth::login($this->create($request->all()));\n\n        return redirect($this->redirectPath());\n    }\n}\n",
+			"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php",
+			"file_size": 896,
+			"file_write_time": 131001218725502710,
+			"settings":
+			{
+				"buffer_size": 896,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/admin/AdminController.php",
+			"settings":
+			{
+				"buffer_size": 4826,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/admin/showAdmin.blade.php",
+			"settings":
+			{
+				"buffer_size": 2657,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/Http/Requests/AdminFormRequest.php",
+			"settings":
+			{
+				"buffer_size": 551,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/admin/register.blade.php",
+			"settings":
+			{
+				"buffer_size": 3233,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/admin/admins.blade.php",
+			"settings":
+			{
+				"buffer_size": 1215,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/admin/dashboard.blade.php",
+			"settings":
+			{
+				"buffer_size": 642,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/User.php",
+			"settings":
+			{
+				"buffer_size": 1169,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/auth.php",
+			"settings":
+			{
+				"buffer_size": 2273,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/auth/login.blade.php",
+			"settings":
+			{
+				"buffer_size": 2899,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/admin/PageController.php",
+			"settings":
+			{
+				"buffer_size": 1601,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/admin/sideBar.php",
+			"settings":
+			{
+				"buffer_size": 3367,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "@extends('master')\n@section('title', 'All Images')\n\n@section('content')\n\n\n<body>\n<section id=\"main\" class=\"column\">\n<div class=\"table-responsive\">\n\n<table class=\"table table-bordered table-striped table-condensed table-hover fsop\" width=\"744\">\n{{Session::put('backUrl',Request::fullUrl())}}\n@foreach ($errors->all() as $error)\n<p class=\"alert alert-danger\">{{ $error }}</p>\n@endforeach\n@if (session('status'))\n<div class=\"alert alert-success\">\n{{ session('status') }}\n@endif\n</div>\n\n</table>\n</div>		\n\n</section>\n@endsection",
+			"file": "resources/views/admin/allimages.blade.php",
+			"file_size": 549,
+			"file_write_time": 131001181214964099,
+			"settings":
+			{
+				"buffer_size": 524,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "@extends('master')\n@section('title', 'All Inapproperiate Images')\n\n@section('content')\n\n\n<body>\n<section id=\"main\" class=\"column\">\n<div class=\"table-responsive\">\n\n<table class=\"table table-bordered table-striped table-condensed table-hover fsop\" width=\"744\">\n{{Session::put('backUrl',Request::fullUrl())}}\n@foreach ($errors->all() as $error)\n<p class=\"alert alert-danger\">{{ $error }}</p>\n@endforeach\n@if (session('status'))\n<div class=\"alert alert-success\">\n{{ session('status') }}\n@endif\n</div>\n\n</table>\n</div>		\n</section>\n@endsection",
+			"file": "resources/views/admin/allinaptimages.blade.php",
+			"file_size": 562,
+			"file_write_time": 131001177239277004,
+			"settings":
+			{
+				"buffer_size": 538,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\nnamespace Illuminate\\Routing;\n\nuse Illuminate\\Http\\RedirectResponse;\nuse Illuminate\\Session\\Store as SessionStore;\n\nclass Redirector\n{\n    /**\n     * The URL generator instance.\n     *\n     * @var \\Illuminate\\Routing\\UrlGenerator\n     */\n    protected $generator;\n\n    /**\n     * The session store instance.\n     *\n     * @var \\Illuminate\\Session\\Store\n     */\n    protected $session;\n\n    /**\n     * Create a new Redirector instance.\n     *\n     * @param  \\Illuminate\\Routing\\UrlGenerator  $generator\n     * @return void\n     */\n    public function __construct(UrlGenerator $generator)\n    {\n        $this->generator = $generator;\n    }\n\n    /**\n     * Create a new redirect response to the \"home\" route.\n     *\n     * @param  int  $status\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    public function home($status = 302)\n    {\n        return $this->to($this->generator->route('home'), $status);\n    }\n\n    /**\n     * Create a new redirect response to the previous location.\n     *\n     * @param  int    $status\n     * @param  array  $headers\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    public function back($status = 302, $headers = [])\n    {\n        $back = $this->generator->previous();\n\n        return $this->createRedirect($back, $status, $headers);\n    }\n\n    /**\n     * Create a new redirect response to the current URI.\n     *\n     * @param  int    $status\n     * @param  array  $headers\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    public function refresh($status = 302, $headers = [])\n    {\n        return $this->to($this->generator->getRequest()->path(), $status, $headers);\n    }\n\n    /**\n     * Create a new redirect response, while putting the current URL in the session.\n     *\n     * @param  string  $path\n     * @param  int     $status\n     * @param  array   $headers\n     * @param  bool    $secure\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    public function guest($path, $status = 302, $headers = [], $secure = null)\n    {\n        $this->session->put('url.intended', $this->generator->full());\n\n        return $this->to($path, $status, $headers, $secure);\n    }\n\n    /**\n     * Create a new redirect response to the previously intended location.\n     *\n     * @param  string  $default\n     * @param  int     $status\n     * @param  array   $headers\n     * @param  bool    $secure\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    public function intended($default = '/', $status = 302, $headers = [], $secure = null)\n    {\n        $path = $this->session->pull('url.intended', $default);\n\n        return $this->to($path, $status, $headers, $secure);\n    }\n\n    /**\n     * Create a new redirect response to the given path.\n     *\n     * @param  string  $path\n     * @param  int     $status\n     * @param  array   $headers\n     * @param  bool    $secure\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    public function to($path, $status = 302, $headers = [], $secure = null)\n    {\n        $path = $this->generator->to($path, [], $secure);\n\n        return $this->createRedirect($path, $status, $headers);\n    }\n\n    /**\n     * Create a new redirect response to an external URL (no validation).\n     *\n     * @param  string  $path\n     * @param  int     $status\n     * @param  array   $headers\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    public function away($path, $status = 302, $headers = [])\n    {\n        return $this->createRedirect($path, $status, $headers);\n    }\n\n    /**\n     * Create a new redirect response to the given HTTPS path.\n     *\n     * @param  string  $path\n     * @param  int     $status\n     * @param  array   $headers\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    public function secure($path, $status = 302, $headers = [])\n    {\n        return $this->to($path, $status, $headers, true);\n    }\n\n    /**\n     * Create a new redirect response to a named route.\n     *\n     * @param  string  $route\n     * @param  array   $parameters\n     * @param  int     $status\n     * @param  array   $headers\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    public function route($route, $parameters = [], $status = 302, $headers = [])\n    {\n        $path = $this->generator->route($route, $parameters);\n\n        return $this->to($path, $status, $headers);\n    }\n\n    /**\n     * Create a new redirect response to a controller action.\n     *\n     * @param  string  $action\n     * @param  array   $parameters\n     * @param  int     $status\n     * @param  array   $headers\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    public function action($action, $parameters = [], $status = 302, $headers = [])\n    {\n        $path = $this->generator->action($action, $parameters);\n\n        return $this->to($path, $status, $headers);\n    }\n\n    /**\n     * Create a new redirect response.\n     *\n     * @param  string  $path\n     * @param  int     $status\n     * @param  array   $headers\n     * @return \\Illuminate\\Http\\RedirectResponse\n     */\n    protected function createRedirect($path, $status, $headers)\n    {\n        $redirect = new RedirectResponse($path, $status, $headers);\n\n        if (isset($this->session)) {\n            $redirect->setSession($this->session);\n        }\n\n        $redirect->setRequest($this->generator->getRequest());\n\n        return $redirect;\n    }\n\n    /**\n     * Get the URL generator instance.\n     *\n     * @return \\Illuminate\\Routing\\UrlGenerator\n     */\n    public function getUrlGenerator()\n    {\n        return $this->generator;\n    }\n\n    /**\n     * Set the active session store.\n     *\n     * @param  \\Illuminate\\Session\\Store  $session\n     * @return void\n     */\n    public function setSession(SessionStore $session)\n    {\n        $this->session = $session;\n    }\n}\n",
 			"file": "vendor/laravel/framework/src/Illuminate/Routing/Redirector.php",
+			"file_size": 5769,
+			"file_write_time": 131001218742473642,
 			"settings":
 			{
 				"buffer_size": 5769,
@@ -174,7 +448,7 @@
 			"file": "composer.json",
 			"settings":
 			{
-				"buffer_size": 1325,
+				"buffer_size": 1398,
 				"line_ending": "Unix"
 			}
 		},
@@ -239,10 +513,29 @@
 		"/D/AppDevelopment/htdocs/Code/kreepster",
 		"/D/AppDevelopment/htdocs/Code/kreepster/app",
 		"/D/AppDevelopment/htdocs/Code/kreepster/app/Http",
-		"/D/AppDevelopment/htdocs/Code/kreepster/app/Http/Controllers"
+		"/D/AppDevelopment/htdocs/Code/kreepster/app/Http/Controllers",
+		"/D/AppDevelopment/htdocs/Code/kreepster/app/Http/Controllers/admin",
+		"/D/AppDevelopment/htdocs/Code/kreepster/app/Http/Controllers/Auth",
+		"/D/AppDevelopment/htdocs/Code/kreepster/app/Http/Middleware",
+		"/D/AppDevelopment/htdocs/Code/kreepster/app/Http/Requests",
+		"/D/AppDevelopment/htdocs/Code/kreepster/app/Jobs",
+		"/D/AppDevelopment/htdocs/Code/kreepster/config",
+		"/D/AppDevelopment/htdocs/Code/kreepster/resources",
+		"/D/AppDevelopment/htdocs/Code/kreepster/resources/views",
+		"/D/AppDevelopment/htdocs/Code/kreepster/resources/views/admin",
+		"/D/AppDevelopment/htdocs/Code/kreepster/resources/views/admin/UserPics",
+		"/D/AppDevelopment/htdocs/Code/kreepster/resources/views/auth"
 	],
 	"file_history":
 	[
+		"/D/AppDevelopment/htdocs/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
+		"/D/AppDevelopment/htdocs/Code/kreepster/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php",
+		"/D/AppDevelopment/htdocs/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ThrottlesLogins.php",
+		"/D/AppDevelopment/htdocs/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+		"/D/AppDevelopment/htdocs/Code/kreepster/app/Http/Middleware/Authenticate.php",
+		"/D/AppDevelopment/htdocs/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php",
+		"/D/AppDevelopment/htdocs/Code/kreepster/vendor/laravel/framework/src/Illuminate/Http/Request.php",
+		"/D/AppDevelopment/htdocs/Code/kreepster/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php",
 		"/D/AppDevelopment/htdocs/Code/kreepster/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php",
 		"/D/AppDevelopment/htdocs/Code/kreepster/app/Http/Requests/PictureRequest.php",
 		"/D/AppDevelopment/htdocs/Code/kreepster/config/app.php",
@@ -273,9 +566,11 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"D:\\AppDevelopment\\htdocs\\Code\\kreepster",
+			""
 		]
 	},
 	"find_state":
@@ -283,6 +578,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"        $images = \\App\\UserPicture::where('userAction','=','-9')->paginate(10);\n        foreach($images as $image) {\n            $uid = \\App\\UserTable::whereUserid($image->UserID)->FirstorFail();\n            $image['MarkedBy'] = $uid->UserName;\n            $pic = \\App\\PictureTable::wherePictureid($image->PictureID)->FirstorFail();\n            $image['PictureURL'] = $pic->PictureURL;\n            $image['BeautyCount'] = $pic->BeautyCount;\n            $image['KreepCount'] = $pic->KreepCount;\n            $uid1 = \\App\\UserTable::whereUserid($pic->UserID)->FirstorFail();\n            $image['ImagePostedBy'] = $uid1->UserName;\n            //echo $uid->FirsName;\n       }\n       return view('admin.UserPics.allinaptimages',compact('images'));",
+			";\n",
+			"Admin",
+			"App\\Admin",
+			"\\App\\Admin",
+			"\\App\\Ad",
+			"\\App\\Admin",
+			"userName",
+			"username",
+			"User",
+			"user",
+			"use App\\User;",
+			"User",
+			"Lang",
+			"attempt",
+			"hasg"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -290,6 +601,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"username"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -309,15 +621,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8346,
+						"buffer_size": 10126,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								8346
+								2331,
+								2331
 							]
 						],
 						"settings":
@@ -329,7 +641,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 810.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -364,7 +676,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 36,
 					"type": "text"
 				},
 				{
@@ -392,57 +704,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 31,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "app/Http/Controllers/MyAPI.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1744,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "app/PictureTable.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1357,
+						"buffer_size": 1772,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								1357
+								401,
+								401
 							]
 						],
 						"settings":
@@ -456,30 +738,427 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "app/Http/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1186,
+						"buffer_size": 4226,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								927,
-								927
+								2409,
+								2413
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Http/Controllers/admin/ImagesController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3798,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2030,
+								2030
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 600.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "resources/views/admin/UserPics/allinaptimages.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								896,
+								896
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "resources/views/admin/UserPics/topKreepy.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1298,
+								1298
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"open_with_edit": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "resources/views/admin/UserPics/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1090,
+								1090
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "resources/views/admin/UserPics/showUserPics.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1533,
+								1533
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "resources/views/admin/UserPics/topBeauty.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1290,
+								1298
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "config/app.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8732,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6398,
+								6398
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11743,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										318,
+										328
+									],
+									[
+										894,
+										904
+									],
+									[
+										1470,
+										1480
+									],
+									[
+										2046,
+										2056
+									],
+									[
+										2622,
+										2632
+									],
+									[
+										3198,
+										3208
+									],
+									[
+										3774,
+										3784
+									],
+									[
+										4350,
+										4360
+									],
+									[
+										4926,
+										4936
+									],
+									[
+										5502,
+										5512
+									],
+									[
+										6191,
+										6200
+									],
+									[
+										6767,
+										6776
+									],
+									[
+										7343,
+										7352
+									],
+									[
+										7919,
+										7928
+									],
+									[
+										8495,
+										8504
+									],
+									[
+										9071,
+										9080
+									],
+									[
+										9647,
+										9656
+									],
+									[
+										10223,
+										10232
+									],
+									[
+										10799,
+										10808
+									],
+									[
+										11375,
+										11384
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								5873,
+								5873
+							]
+						],
+						"settings":
+						{
+							"default_dir": "D:\\AppDevelopment\\htdocs\\Code\\kreepster",
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ 	].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1440.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "app/Http/Controllers/admin/UserController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3100,
+								3107
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1099.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "resources/views/admin/users.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								69,
+								69
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -489,7 +1168,617 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 15,
+					"file": "resources/views/admin/showUser.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2342,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1663,
+								1667
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "resources/views/master.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 859,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								851,
+								851
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 35,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "app/Http/Controllers/Auth/AuthController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1737,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								742,
+								742
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								100,
+								100
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3993,
+								3993
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1592.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/RedirectsUsers.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								46,
+								46
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 896,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								887,
+								887
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 34,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "app/Http/Controllers/admin/AdminController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								575,
+								575
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "resources/views/admin/showAdmin.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2657,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								483,
+								436
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "app/Http/Requests/AdminFormRequest.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								513,
+								513
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "resources/views/admin/register.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3233,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3233,
+								3233
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "resources/views/admin/admins.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								406,
+								360
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "resources/views/admin/dashboard.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 642,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								593,
+								593
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"open_with_edit": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "app/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1169,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1003,
+								1003
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "config/auth.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								955,
+								955
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "resources/views/auth/login.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2899,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1406,
+								1406
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 33,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "app/Http/Controllers/admin/PageController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1601,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								354,
+								354
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "resources/views/admin/sideBar.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1692,
+								1692
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 409.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "resources/views/admin/allimages.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								501,
+								501
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"open_with_edit": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 32,
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "resources/views/admin/allinaptimages.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								538,
+								538
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"open_with_edit": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 35,
 					"file": "vendor/laravel/framework/src/Illuminate/Routing/Redirector.php",
 					"semi_transient": false,
 					"settings":
@@ -515,11 +1804,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 37,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 36,
 					"file": "app/Http/Controllers/PictureUserController.php",
 					"semi_transient": false,
 					"settings":
@@ -542,15 +1831,15 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 1620.0,
+						"translation.x": 0.0,
+						"translation.y": 945.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 37,
 					"file": "app/UserPicture.php",
 					"semi_transient": false,
 					"settings":
@@ -577,11 +1866,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 39,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 38,
 					"file": "app/UserTable.php",
 					"semi_transient": false,
 					"settings":
@@ -593,8 +1882,8 @@
 						"selection":
 						[
 							[
-								133,
-								133
+								382,
+								382
 							]
 						],
 						"settings":
@@ -606,16 +1895,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 39,
 					"file": "composer.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1325,
+						"buffer_size": 1398,
 						"regions":
 						{
 						},
@@ -640,11 +1929,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 40,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 40,
 					"file": "public/formsubmit.html",
 					"semi_transient": false,
 					"settings":
@@ -667,13 +1956,14 @@
 							"open_with_edit": true,
 							"remote_loading": false,
 							"synced": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 38,
 					"type": "text"
 				}
 			]
@@ -722,7 +2012,7 @@
 	"project": "kreepster.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
